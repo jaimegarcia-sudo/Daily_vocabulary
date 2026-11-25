@@ -1,0 +1,1415 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>American English 400 — Vocabulary Builder</title>
+  <!-- Google Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+          },
+        },
+      },
+    };
+  </script>
+</head>
+<body class="bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-100 font-sans antialiased min-h-screen transition-colors duration-200">
+
+  <!-- Top Navigation & Global Progress Header -->
+  <header class="sticky top-0 z-30 bg-white/90 dark:bg-slate-900/90 backdrop-blur-md border-b border-slate-200 dark:border-slate-800 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
+      <div class="flex flex-wrap items-center justify-between gap-3">
+        <!-- Brand -->
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-xl bg-indigo-600 text-white flex items-center justify-center shadow-md shadow-indigo-500/20 shrink-0">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+            </svg>
+          </div>
+          <div>
+            <h1 class="text-lg sm:text-xl font-extrabold tracking-tight text-slate-900 dark:text-white leading-tight">
+              American English 400
+            </h1>
+            <p class="text-xs text-slate-500 dark:text-slate-400">
+              Most Common Verbs, Adjectives, Nouns &amp; Adverbs/Prepositions
+            </p>
+          </div>
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="flex items-center gap-2">
+          <!-- Study Mode Toggle -->
+          <button id="modeToggleBtn" type="button" class="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl text-sm font-semibold bg-indigo-50 text-indigo-700 hover:bg-indigo-100 dark:bg-indigo-950/60 dark:text-indigo-300 dark:hover:bg-indigo-900/60 transition">
+            <svg id="modeIcon" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+            </svg>
+            <span id="modeToggleText">Flashcards</span>
+          </button>
+
+          <!-- Theme Toggle -->
+          <button id="themeToggleBtn" type="button" aria-label="Toggle dark mode" class="p-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-600 dark:text-slate-300 transition">
+            <svg id="sunIcon" class="w-4 h-4 hidden dark:block" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+            </svg>
+            <svg id="moonIcon" class="w-4 h-4 block dark:hidden" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+            </svg>
+          </button>
+
+          <!-- Reset Button -->
+          <button id="resetBtn" type="button" title="Reset progress" class="p-2.5 rounded-xl bg-slate-100 hover:bg-rose-100 hover:text-rose-600 dark:bg-slate-800 dark:hover:bg-rose-950/60 dark:hover:text-rose-400 text-slate-600 dark:text-slate-300 transition">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Overall Progress Bar -->
+      <div class="mt-3 pt-3 border-t border-slate-100 dark:border-slate-800">
+        <div class="flex flex-wrap items-center justify-between gap-2 text-xs font-medium mb-1.5">
+          <div class="flex items-center gap-2">
+            <span class="font-bold text-slate-800 dark:text-slate-200">Overall Vocabulary Learned:</span>
+            <span id="globalLearnedText" class="px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-800 dark:bg-emerald-900/50 dark:text-emerald-300 font-bold">0 / 400 (0%)</span>
+          </div>
+          <div class="flex flex-wrap items-center gap-3 text-slate-500 dark:text-slate-400">
+            <span class="inline-flex items-center gap-1"><span class="w-2.5 h-2.5 rounded-full bg-emerald-500"></span>Know: <strong id="statKnow" class="text-slate-700 dark:text-slate-200">0</strong></span>
+            <span class="inline-flex items-center gap-1"><span class="w-2.5 h-2.5 rounded-full bg-amber-400"></span>Think I know: <strong id="statThink" class="text-slate-700 dark:text-slate-200">0</strong></span>
+            <span class="inline-flex items-center gap-1"><span class="w-2.5 h-2.5 rounded-full bg-rose-500"></span>Need to learn: <strong id="statLearn" class="text-slate-700 dark:text-slate-200">0</strong></span>
+          </div>
+        </div>
+        <!-- Stacked Global Progress Bar -->
+        <div class="w-full h-3 bg-slate-200 dark:bg-slate-800 rounded-full overflow-hidden flex">
+          <div id="globalBarKnow" class="bg-emerald-500 h-full transition-all duration-500 ease-out" style="width: 0%"></div>
+          <div id="globalBarThink" class="bg-amber-400 h-full transition-all duration-500 ease-out" style="width: 0%"></div>
+          <div id="globalBarLearn" class="bg-rose-400 h-full transition-all duration-500 ease-out" style="width: 0%"></div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content Container -->
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+
+    <!-- Category Tabs with Individual Progress Bars -->
+    <section aria-label="Word categories" class="grid grid-cols-2 lg:grid-cols-4 gap-3 mb-6" id="categoryTabs">
+      <!-- Populated dynamically by JS -->
+    </section>
+
+    <!-- Search & Filter Bar -->
+    <section class="bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 p-4 mb-6 shadow-sm">
+      <div class="flex flex-col md:flex-row gap-3 items-stretch md:items-center justify-between">
+        <!-- Search Input -->
+        <div class="relative flex-1">
+          <svg class="w-4 h-4 text-slate-400 absolute left-3.5 top-1/2 -translate-y-1/2 pointer-events-none" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+          </svg>
+          <input id="searchInput" type="text" placeholder="Search word, verb form, or example sentence..." class="w-full pl-10 pr-9 py-2.5 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition" />
+          <button id="clearSearchBtn" type="button" class="hidden absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 hover:text-slate-600 dark:hover:text-slate-200">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+
+        <!-- Status Filter Pills -->
+        <div class="flex flex-wrap items-center gap-1.5" id="statusFilters">
+          <button data-filter="all" class="filter-btn px-3 py-2 rounded-xl text-xs font-semibold transition bg-indigo-600 text-white">All</button>
+          <button data-filter="know" class="filter-btn px-3 py-2 rounded-xl text-xs font-semibold transition bg-slate-100 text-slate-700 hover:bg-slate-200 dark:bg-slate-800 dark:text-slate-300">I know</button>
+          <button data-filter="think" class="filter-btn px-3 py-2 rounded-xl text-xs font-semibold transition bg-slate-100 text-slate-700 hover:bg-slate-200 dark:bg-slate-800 dark:text-slate-300">Think I know</button>
+          <button data-filter="learn" class="filter-btn px-3 py-2 rounded-xl text-xs font-semibold transition bg-slate-100 text-slate-700 hover:bg-slate-200 dark:bg-slate-800 dark:text-slate-300">Need to learn</button>
+          <button data-filter="unmarked" class="filter-btn px-3 py-2 rounded-xl text-xs font-semibold transition bg-slate-100 text-slate-700 hover:bg-slate-200 dark:bg-slate-800 dark:text-slate-300">Unmarked</button>
+        </div>
+      </div>
+
+      <!-- Active Category Info & Count -->
+      <div class="mt-3 pt-3 border-t border-slate-100 dark:border-slate-800 flex flex-wrap items-center justify-between gap-2 text-xs text-slate-500 dark:text-slate-400">
+        <span id="resultsCount">Showing 100 of 100 words</span>
+        <span class="hidden sm:inline">Tip: Click the speaker icon on any word to hear its American English pronunciation.</span>
+      </div>
+    </section>
+
+    <!-- LIST / CARD VIEW -->
+    <section id="listView" class="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <!-- Word cards rendered dynamically -->
+    </section>
+
+    <!-- EMPTY STATE -->
+    <section id="emptyState" class="hidden text-center py-16 bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800">
+      <div class="w-14 h-14 rounded-2xl bg-slate-100 dark:bg-slate-800 text-slate-400 flex items-center justify-center mx-auto mb-3">
+        <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+        </svg>
+      </div>
+      <h3 class="text-base font-bold text-slate-800 dark:text-slate-200">No matching words found</h3>
+      <p class="text-sm text-slate-500 dark:text-slate-400 mt-1">Try adjusting your search or filter selection.</p>
+      <button id="resetFiltersBtn" type="button" class="mt-4 px-4 py-2 rounded-xl bg-indigo-600 text-white text-sm font-semibold hover:bg-indigo-700 transition">Show all words</button>
+    </section>
+
+    <!-- FLASHCARD PRACTICE VIEW -->
+    <section id="flashcardView" class="hidden max-w-2xl mx-auto">
+      <div class="bg-white dark:bg-slate-900 rounded-3xl border border-slate-200 dark:border-slate-800 shadow-lg overflow-hidden">
+        <!-- Flashcard Top Bar -->
+        <div class="px-6 py-4 bg-slate-50 dark:bg-slate-800/60 border-b border-slate-200 dark:border-slate-800 flex items-center justify-between">
+          <span id="fcCategoryBadge" class="text-xs font-bold uppercase tracking-wider px-2.5 py-1 rounded-lg bg-indigo-100 text-indigo-700 dark:bg-indigo-900/50 dark:text-indigo-300">Verbs</span>
+          <span id="fcCounter" class="text-xs font-semibold text-slate-500 dark:text-slate-400">Card 1 of 100</span>
+        </div>
+
+        <!-- Flashcard Body -->
+        <div class="p-6 sm:p-8 text-center">
+          <div class="flex items-center justify-center gap-3 mb-2">
+            <span id="fcRank" class="text-sm font-bold text-slate-400">#1</span>
+            <h2 id="fcWord" class="text-4xl sm:text-5xl font-extrabold text-slate-900 dark:text-white tracking-tight">be</h2>
+            <button id="fcSpeakBtn" type="button" aria-label="Pronounce word" class="p-2.5 rounded-full bg-indigo-50 text-indigo-600 hover:bg-indigo-100 dark:bg-indigo-950 dark:text-indigo-300 transition">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z" />
+              </svg>
+            </button>
+          </div>
+
+          <!-- Per-word Progress Bar inside Flashcard -->
+          <div class="max-w-xs mx-auto mt-3 mb-6">
+            <div class="flex justify-between text-[11px] font-semibold text-slate-500 dark:text-slate-400 mb-1">
+              <span>Word Mastery</span>
+              <span id="fcMasteryLabel">0%</span>
+            </div>
+            <div class="w-full h-2 bg-slate-200 dark:bg-slate-800 rounded-full overflow-hidden">
+              <div id="fcMasteryBar" class="h-full rounded-full transition-all duration-300 bg-slate-300" style="width: 0%"></div>
+            </div>
+          </div>
+
+          <!-- Reveal Details Button -->
+          <button id="fcRevealBtn" type="button" class="px-5 py-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-sm font-semibold text-slate-700 dark:text-slate-200 transition mb-4">
+            Show Forms &amp; Example
+          </button>
+
+          <!-- Revealed Content -->
+          <div id="fcDetails" class="hidden text-left mt-2 space-y-4">
+            <!-- Verb Forms Container (Only for verbs) -->
+            <div id="fcVerbForms" class="hidden grid grid-cols-2 sm:grid-cols-4 gap-2"></div>
+
+            <!-- Subtype Badge (Only for Adverbs & Prepositions) -->
+            <div id="fcSubtype" class="hidden text-center"></div>
+
+            <!-- Example Sentence -->
+            <div class="p-4 rounded-2xl bg-indigo-50/70 dark:bg-indigo-950/40 border border-indigo-100 dark:border-indigo-900/60">
+              <div class="flex items-center justify-between mb-1">
+                <span class="text-[11px] font-bold uppercase tracking-wider text-indigo-600 dark:text-indigo-400">Example Usage</span>
+                <button id="fcSpeakExBtn" type="button" class="text-xs font-medium text-indigo-600 dark:text-indigo-400 hover:underline">Listen</button>
+              </div>
+              <p id="fcExample" class="text-base text-slate-800 dark:text-slate-200 leading-relaxed"></p>
+            </div>
+          </div>
+
+          <!-- Checklist Buttons -->
+          <div class="mt-6 pt-6 border-t border-slate-100 dark:border-slate-800">
+            <p class="text-xs font-semibold text-slate-500 dark:text-slate-400 mb-3">How well do you know this word?</p>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-2.5" id="fcChecklistBtns">
+              <button data-status="know" class="fc-status-btn py-3 px-3 rounded-xl text-xs font-bold border-2 transition flex items-center justify-center gap-1.5">
+                <span>I know this word</span>
+              </button>
+              <button data-status="think" class="fc-status-btn py-3 px-3 rounded-xl text-xs font-bold border-2 transition flex items-center justify-center gap-1.5">
+                <span>I think I know this word</span>
+              </button>
+              <button data-status="learn" class="fc-status-btn py-3 px-3 rounded-xl text-xs font-bold border-2 transition flex items-center justify-center gap-1.5">
+                <span>I need to learn this word</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Flashcard Navigation Footer -->
+        <div class="px-6 py-4 bg-slate-50 dark:bg-slate-800/60 border-t border-slate-200 dark:border-slate-800 flex items-center justify-between gap-3">
+          <button id="fcPrevBtn" type="button" class="px-4 py-2.5 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-sm font-semibold hover:bg-slate-100 dark:hover:bg-slate-700 transition">
+            &larr; Previous
+          </button>
+          <button id="fcShuffleBtn" type="button" class="px-3.5 py-2.5 rounded-xl text-xs font-semibold text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition">
+            Shuffle
+          </button>
+          <button id="fcNextBtn" type="button" class="px-4 py-2.5 rounded-xl bg-indigo-600 text-white text-sm font-semibold hover:bg-indigo-700 transition">
+            Next &rarr;
+          </button>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Custom Reset Confirmation Modal (No browser confirm/alert) -->
+  <div id="resetModal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-sm">
+    <div class="bg-white dark:bg-slate-900 rounded-2xl max-w-md w-full p-6 border border-slate-200 dark:border-slate-800 shadow-2xl">
+      <h3 class="text-lg font-bold text-slate-900 dark:text-white">Reset All Progress?</h3>
+      <p class="text-sm text-slate-600 dark:text-slate-400 mt-2">
+        This will clear your checklist selections across all 400 words. You cannot undo this action.
+      </p>
+      <div class="mt-6 flex items-center justify-end gap-2.5">
+        <button id="cancelResetBtn" type="button" class="px-4 py-2 rounded-xl text-sm font-semibold bg-slate-100 text-slate-700 hover:bg-slate-200 dark:bg-slate-800 dark:text-slate-300 transition">
+          Cancel
+        </button>
+        <button id="confirmResetBtn" type="button" class="px-4 py-2 rounded-xl text-sm font-semibold bg-rose-600 text-white hover:bg-rose-700 transition">
+          Yes, Reset All
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div id="toast" class="fixed bottom-5 right-5 z-40 transform translate-y-20 opacity-0 transition-all duration-300 pointer-events-none">
+    <div class="px-4 py-3 rounded-xl bg-slate-900 dark:bg-white text-white dark:text-slate-900 text-sm font-semibold shadow-xl flex items-center gap-2">
+      <span id="toastMsg">Saved!</span>
+    </div>
+  </div>
+
+  <script>
+    /**
+     * =========================================================================
+     * COMPLETE VOCABULARY DATASET (400 Words from the American English PDF)
+     * =========================================================================
+     * - Verbs: [word, presentParticiple, past, pastParticiple, example, isModal]
+     * - Adjectives: [word, example]
+     * - Nouns: [word, example]
+     * - Adverbs & Prepositions: [word, type, example]
+     */
+    const RAW_DATA = {
+      verbs: [
+        ["be", "being", "was / were", "been", "She wants to be an architect after college.", false],
+        ["have", "having", "had", "had", "We have a big English test tomorrow morning.", false],
+        ["do", "doing", "did", "done", "Please do your homework before dinner.", false],
+        ["say", "saying", "said", "said", "What did the teacher say about the project?", false],
+        ["go", "going", "went", "gone", "They go to the library every Saturday afternoon.", false],
+        ["can", "— (modal)", "could", "— (modal)", "You can speak English much more fluently with daily practice.", true],
+        ["get", "getting", "got", "gotten / got", "I hope to get a good grade on this essay.", false],
+        ["would", "— (modal)", "— (modal)", "— (modal)", "I would love to visit New York City next summer.", true],
+        ["make", "making", "made", "made", "Let us make a study plan for the final exam.", false],
+        ["know", "knowing", "knew", "known", "Do you know how to pronounce this word correctly?", false],
+        ["will", "— (modal)", "would", "— (modal)", "She will call you as soon as she arrives home.", true],
+        ["think", "thinking", "thought", "thought", "I think this is the best way to learn new words.", false],
+        ["take", "taking", "took", "taken", "Please take notes during the science lecture.", false],
+        ["see", "seeing", "saw", "seen", "We can see the mountains clearly from our window.", false],
+        ["come", "coming", "came", "come", "My cousins will come to visit us for the holidays.", false],
+        ["could", "— (modal)", "— (modal)", "— (modal)", "Could you please repeat that sentence slowly?", true],
+        ["want", "wanting", "wanted", "wanted", "I want to improve my writing skills this semester.", false],
+        ["look", "looking", "looked", "looked", "Look closely at the examples on page ten.", false],
+        ["use", "using", "used", "used", "Students use flashcards to memorize vocabulary quickly.", false],
+        ["find", "finding", "found", "found", "I cannot find my notebook anywhere in my backpack.", false],
+        ["give", "giving", "gave", "given", "Please give me an example of how to use this verb.", false],
+        ["tell", "telling", "told", "told", "Can you tell me the time? My watch stopped.", false],
+        ["work", "working", "worked", "worked", "My brother works at a hospital downtown.", false],
+        ["may", "— (modal)", "might", "— (modal)", "May I ask a question about the assignment?", true],
+        ["should", "— (modal)", "— (modal)", "— (modal)", "You should review your flashcards for ten minutes every day.", true],
+        ["call", "calling", "called", "called", "I will call my mom when the bus gets to the station.", false],
+        ["try", "trying", "tried", "tried", "Always try to speak in complete sentences during class.", false],
+        ["ask", "asking", "asked", "asked", "Do not be afraid to ask for help when you are confused.", false],
+        ["need", "needing", "needed", "needed", "We need more water before we start the hike.", false],
+        ["feel", "feeling", "felt", "felt", "I feel much more confident about my English now.", false],
+        ["become", "becoming", "became", "become", "With hard work, she became a talented pianist.", false],
+        ["leave", "leaving", "left", "left", "The train leaves the station at 7:30 sharp.", false],
+        ["put", "putting", "put", "put", "Please put the books back on the shelf when you finish.", false],
+        ["mean", "meaning", "meant", "meant", "What does this expression mean in American English?", false],
+        ["keep", "keeping", "kept", "kept", "Keep practicing every day and you will see great results.", false],
+        ["let", "letting", "let", "let", "My parents let me stay up late on Friday nights.", false],
+        ["begin", "beginning", "began", "begun", "The movie will begin in five minutes.", false],
+        ["seem", "seeming", "seemed", "seemed", "The math problem seemed difficult at first, but it was easy.", false],
+        ["help", "helping", "helped", "helped", "Thank you so much for helping me carry these boxes.", false],
+        ["talk", "talking", "talked", "talked", "We talked for an hour about our favorite movies.", false],
+        ["turn", "turning", "turned", "turned", "Turn left at the traffic light to reach the museum.", false],
+        ["start", "starting", "started", "started", "Class starts at eight o'clock every morning.", false],
+        ["might", "— (modal)", "— (modal)", "— (modal)", "Take an umbrella because it might rain this afternoon.", true],
+        ["show", "showing", "showed", "shown", "Can you show me how to solve this equation?", false],
+        ["hear", "hearing", "heard", "heard", "Did you hear the thunder outside last night?", false],
+        ["play", "playing", "played", "played", "The children love to play soccer in the park.", false],
+        ["run", "running", "ran", "run", "She runs three miles every morning before breakfast.", false],
+        ["move", "moving", "moved", "moved", "Our family moved to a quieter neighborhood last year.", false],
+        ["like", "liking", "liked", "liked", "I really like listening to podcasts while walking.", false],
+        ["live", "living", "lived", "lived", "They live in a small apartment near the university.", false],
+        ["believe", "believing", "believed", "believed", "I believe that anyone can learn a new language.", false],
+        ["hold", "holding", "held", "held", "Please hold the door open for the person behind you.", false],
+        ["bring", "bringing", "brought", "brought", "Remember to bring a pencil and an eraser to the exam.", false],
+        ["happen", "happening", "happened", "happened", "Good things happen when you stay consistent.", false],
+        ["must", "— (modal)", "— (modal)", "— (modal)", "You must wear a seatbelt whenever you ride in a car.", true],
+        ["write", "writing", "wrote", "written", "Write a short paragraph using five new vocabulary words.", false],
+        ["provide", "providing", "provided", "provided", "The school provides free textbooks for all students.", false],
+        ["sit", "sitting", "sat", "sat", "Please sit down and open your laptops.", false],
+        ["stand", "standing", "stood", "stood", "Everyone stood up to applaud the musicians.", false],
+        ["lose", "losing", "lost", "lost", "Be careful not to lose your keys at the beach.", false],
+        ["pay", "paying", "paid", "paid", "I paid for the coffee with my debit card.", false],
+        ["meet", "meeting", "met", "met", "Let us meet outside the bookstore at noon.", false],
+        ["include", "including", "included", "included", "The ticket price includes breakfast and a guided tour.", false],
+        ["continue", "continuing", "continued", "continued", "Even when it rained, they continued playing the game.", false],
+        ["set", "setting", "set", "set", "I set my alarm for 6:00 a.m. so I would not be late.", false],
+        ["learn", "learning", "learned / learnt", "learned / learnt", "Students learn faster when they practice with real examples.", false],
+        ["change", "changing", "changed", "changed", "The weather can change very quickly in the mountains.", false],
+        ["lead", "leading", "led", "led", "This path leads directly to the main entrance.", false],
+        ["understand", "understanding", "understood", "understood", "Now I finally understand how past participles work!", false],
+        ["watch", "watching", "watched", "watched", "We watched an interesting documentary about space.", false],
+        ["follow", "following", "followed", "followed", "Follow the recipe carefully so the cake turns out well.", false],
+        ["stop", "stopping", "stopped", "stopped", "The driver stopped at the crosswalk for the pedestrians.", false],
+        ["create", "creating", "created", "created", "She created a colorful poster for the science fair.", false],
+        ["speak", "speaking", "spoke", "spoken", "He speaks both Spanish and English fluently.", false],
+        ["read", "reading", "read", "read", "I read one chapter of my novel before going to sleep.", false],
+        ["allow", "allowing", "allowed", "allowed", "The museum does not allow flash photography inside.", false],
+        ["add", "adding", "added", "added", "Add a pinch of salt to the soup before serving.", false],
+        ["spend", "spending", "spent", "spent", "We spent the whole weekend camping by the lake.", false],
+        ["grow", "growing", "grew", "grown", "Tomatoes grow best when they get plenty of sunlight.", false],
+        ["open", "opening", "opened", "opened", "Please open the window to let some fresh air in.", false],
+        ["walk", "walking", "walked", "walked", "It only takes ten minutes to walk to the train station.", false],
+        ["win", "winning", "won", "won", "Our school team won the championship trophy last night.", false],
+        ["offer", "offering", "offered", "offered", "He offered to help his neighbor paint the fence.", false],
+        ["remember", "remembering", "remembered", "remembered", "Did you remember to lock the front door?", false],
+        ["love", "loving", "loved", "loved", "I love spending time outdoors with my friends.", false],
+        ["consider", "considering", "considered", "considered", "Please consider all your options before deciding.", false],
+        ["appear", "appearing", "appeared", "appeared", "A bright rainbow appeared in the sky after the storm.", false],
+        ["buy", "buying", "bought", "bought", "She bought a new pair of running shoes yesterday.", false],
+        ["wait", "waiting", "waited", "waited", "We waited twenty minutes for a table at the restaurant.", false],
+        ["serve", "serving", "served", "served", "They serve fresh bread and warm soup at that cafe.", false],
+        ["die", "dying", "died", "died", "Houseplants will die if you forget to water them.", false],
+        ["send", "sending", "sent", "sent", "I will send you the notes by email tonight.", false],
+        ["expect", "expecting", "expected", "expected", "We expect the package to arrive by Friday afternoon.", false],
+        ["build", "building", "built", "built", "They are building a new community library downtown.", false],
+        ["stay", "staying", "stayed", "stayed", "We stayed at a cozy hotel near the beach.", false],
+        ["fall", "falling", "fell", "fallen", "Autumn leaves fall from the trees in October.", false],
+        ["cut", "cutting", "cut", "cut", "Be careful when you cut the vegetables with that sharp knife.", false],
+        ["reach", "reaching", "reached", "reached", "Can you reach the book on the top shelf for me?", false],
+        ["kill", "killing", "killed", "killed", "Frost in early spring can kill young garden plants.", false],
+        ["remain", "remaining", "remained", "remained", "Please remain seated until the airplane comes to a full stop.", false]
+      ],
+      adjectives: [
+        ["other", "Do you have any other questions before we move on?"],
+        ["new", "She bought a new notebook for her English class."],
+        ["good", "Reading every day is a very good habit."],
+        ["high", "The hikers climbed to the top of the high mountain."],
+        ["old", "My grandfather lives in a charming old house."],
+        ["great", "You did a great job on your presentation today!"],
+        ["big", "There is a big oak tree in the middle of the yard."],
+        ["American", "We are studying American English vocabulary and idioms."],
+        ["small", "She adopted a small puppy from the local shelter."],
+        ["large", "A large crowd gathered in the plaza for the concert."],
+        ["national", "The park is famous as a protected national treasure."],
+        ["young", "Young children pick up new languages remarkably fast."],
+        ["different", "Each student had a different idea for the art project."],
+        ["black", "He wore a classic black jacket to the evening event."],
+        ["long", "It was a long drive, so we listened to music the whole way."],
+        ["little", "There is a cozy little bakery right around the corner."],
+        ["important", "Getting enough sleep is important for your memory."],
+        ["political", "The newspaper covered the latest political debate."],
+        ["bad", "The bad weather forced us to cancel the picnic."],
+        ["white", "Fresh white snow covered the rooftops overnight."],
+        ["real", "This necklace is made of real silver, not plastic."],
+        ["best", "That was the best meal I have eaten all year."],
+        ["right", "Make sure you write down the right phone number."],
+        ["social", "Volunteering is a wonderful way to build social connections."],
+        ["only", "She is the only student who got every answer correct."],
+        ["public", "The public library offers free Wi-Fi and study rooms."],
+        ["sure", "Are you sure you turned off the lights before leaving?"],
+        ["low", "The store is offering low prices on winter coats this week."],
+        ["early", "We caught an early flight to avoid airport traffic."],
+        ["able", "With practice, you will be able to hold a full conversation."],
+        ["human", "Kindness and curiosity are wonderful human qualities."],
+        ["local", "We bought fresh fruit from the local farmers' market."],
+        ["late", "Sorry for the late reply—I was in class all afternoon."],
+        ["hard", "Learning grammar takes hard work, but it pays off."],
+        ["major", "Traffic is a major challenge in many growing cities."],
+        ["better", "My pronunciation is getting better every single week."],
+        ["economic", "The report explained recent economic trends in the region."],
+        ["strong", "A strong wind blew the umbrella inside out."],
+        ["possible", "Is it possible to finish the assignment before noon?"],
+        ["whole", "We spent the whole afternoon exploring the science museum."],
+        ["free", "Admission to the art gallery is completely free on Sundays."],
+        ["military", "My uncle served in the military for ten years."],
+        ["true", "This movie is based on an inspiring true story."],
+        ["federal", "Federal holidays are observed across the entire country."],
+        ["international", "English is widely used for international communication."],
+        ["full", "The bus was completely full, so we stood in the aisle."],
+        ["special", "We cooked a special dinner to celebrate her graduation."],
+        ["easy", "The instructions were clear and easy to follow."],
+        ["clear", "On a clear night, you can see thousands of stars."],
+        ["recent", "Have you seen any recent movies worth watching?"],
+        ["certain", "I am certain that I left my glasses on the desk."],
+        ["personal", "Never share your personal passwords with strangers."],
+        ["open", "The coffee shop has an open patio for sunny days."],
+        ["red", "She picked a bright red apple from the basket."],
+        ["difficult", "Pronouncing some irregular verbs can be difficult at first."],
+        ["available", "Are there any seats still available for the 7 p.m. show?"],
+        ["likely", "With those dark clouds, it is likely to rain soon."],
+        ["short", "Let us take a short break before starting the next chapter."],
+        ["single", "Not a single student missed the vocabulary quiz today."],
+        ["medical", "She is studying hard to enter medical school next year."],
+        ["current", "What is your current favorite song to listen to?"],
+        ["wrong", "I accidentally took the wrong bus and ended up downtown."],
+        ["private", "They held a private meeting to discuss the new design."],
+        ["past", "Over the past month, I have learned eighty new words."],
+        ["foreign", "Learning a foreign language opens doors to new cultures."],
+        ["fine", "The weather looks fine for a walk along the river."],
+        ["common", "It is a common mistake to confuse 'their' and 'there'."],
+        ["poor", "The phone had a poor signal inside the underground tunnel."],
+        ["natural", "The canyon is famous for its breathtaking natural beauty."],
+        ["significant", "You have made significant progress in your reading speed."],
+        ["similar", "Our two cities have a very similar climate in summer."],
+        ["hot", "Be careful—the tea is still very hot!"],
+        ["dead", "My phone battery is dead because I forgot to charge it."],
+        ["central", "The train station is located in the central part of town."],
+        ["happy", "She was so happy when she received her acceptance letter."],
+        ["serious", "Climate change is a serious issue affecting the whole world."],
+        ["ready", "Are you ready to test yourself with the flashcards?"],
+        ["simple", "Sometimes the most simple explanation is the clearest one."],
+        ["left", "Write your name in the top left corner of the page."],
+        ["physical", "Regular physical exercise helps keep your mind sharp."],
+        ["general", "The lecture gave a general overview of world history."],
+        ["environmental", "Our club organizes environmental cleanups at the beach."],
+        ["financial", "Creating a monthly budget is a smart financial habit."],
+        ["blue", "The sky was a brilliant shade of blue all afternoon."],
+        ["democratic", "Citizens participate in a democratic society by voting."],
+        ["dark", "It gets dark much earlier during the winter months."],
+        ["various", "The market sells various spices from around the world."],
+        ["entire", "He read the entire book in just two days."],
+        ["close", "We have been close friends since elementary school."],
+        ["legal", "You should ask a lawyer if you need legal advice."],
+        ["religious", "Many families celebrate traditional religious holidays together."],
+        ["cold", "Wear a warm scarf because the wind is freezing cold today."],
+        ["final", "Our final exam will cover everything we studied this term."],
+        ["main", "The main entrance is located on the east side of the building."],
+        ["green", "The hills turn vibrant green right after the spring rains."],
+        ["nice", "It was very nice of you to help me carry my groceries."],
+        ["huge", "A huge whale surfaced right beside the tour boat."],
+        ["popular", "Soccer is the most popular sport in many countries."],
+        ["traditional", "My grandmother taught me how to cook traditional soup."],
+        ["cultural", "The festival celebrates the city's rich cultural heritage."]
+      ],
+      nouns: [
+        ["time", "What time does our English class begin tomorrow?"],
+        ["year", "This year I plan to read twelve books in English."],
+        ["people", "Many people enjoy jogging in the park early in the morning."],
+        ["way", "Can you tell me the quickest way to the subway station?"],
+        ["day", "Every day is a new opportunity to learn something useful."],
+        ["man", "The polite man held the elevator door open for us."],
+        ["thing", "The best thing about traveling is trying new foods."],
+        ["woman", "The woman sitting next to me on the flight was a doctor."],
+        ["life", "Music has always been an important part of my life."],
+        ["child", "Every child deserves a safe and inspiring place to learn."],
+        ["world", "The internet connects people from every corner of the world."],
+        ["school", "Our school built a brand-new computer lab this semester."],
+        ["state", "California is the most populous state in the United States."],
+        ["family", "We have dinner together as a family every Sunday evening."],
+        ["student", "Each student received a certificate for completing the course."],
+        ["group", "Our study group meets at the coffee shop on Thursdays."],
+        ["country", "Which country would you most like to visit someday?"],
+        ["problem", "Working together helped us solve the problem in minutes."],
+        ["hand", "Raise your hand if you know the answer to this question."],
+        ["part", "My favorite part of the movie was the surprise ending."],
+        ["place", "This quiet garden is my favorite place to read."],
+        ["case", "Bring a light jacket just in case it gets chilly tonight."],
+        ["week", "We have a vocabulary quiz at the end of every week."],
+        ["company", "She just started a new job at a software company."],
+        ["system", "The city's public transit system is clean and reliable."],
+        ["program", "He enrolled in an online program to learn graphic design."],
+        ["question", "That is a very thoughtful question—let me explain."],
+        ["work", "Good work on your essay! Your grammar has really improved."],
+        ["government", "The local government funded repairs for the main bridge."],
+        ["number", "Please write your phone number at the top of the form."],
+        ["night", "The city lights look spectacular at night."],
+        ["point", "You made an excellent point during the class discussion."],
+        ["home", "There is nothing better than coming home after a long trip."],
+        ["water", "Remember to drink plenty of water during hot weather."],
+        ["room", "The classroom has large windows that let in natural light."],
+        ["mother", "My mother makes the most delicious homemade pasta."],
+        ["area", "There are several great restaurants in this area."],
+        ["money", "Saving a little money each month adds up over time."],
+        ["story", "My grandfather always tells the funniest stories."],
+        ["fact", "It is a scientific fact that water boils at 100 degrees Celsius."],
+        ["month", "February is the shortest month of the calendar year."],
+        ["lot", "I learned a lot of useful expressions from that podcast."],
+        ["right", "Every citizen has the right to express their opinion."],
+        ["study", "A recent study showed that sleep improves memory retention."],
+        ["book", "I just finished reading an amazing mystery book."],
+        ["eye", "Keep an eye on the clock so we do not miss the bus."],
+        ["job", "Finding a job you truly enjoy makes every week brighter."],
+        ["word", "Look up any unfamiliar word in the dictionary right away."],
+        ["business", "Her parents opened a small family bakery business."],
+        ["issue", "We need to fix the microphone issue before the presentation."],
+        ["side", "The bookstore is on the opposite side of the street."],
+        ["kind", "What kind of music do you listen to while studying?"],
+        ["head", "Wear a helmet to protect your head when riding a bike."],
+        ["house", "They painted their house a bright, cheerful yellow."],
+        ["service", "The customer service at that hotel was outstanding."],
+        ["friend", "A true friend supports you through both good and tough times."],
+        ["father", "My father taught me how to ride a bicycle when I was six."],
+        ["power", "The storm knocked out the electrical power for two hours."],
+        ["hour", "The drive to the coast takes about one hour."],
+        ["game", "Would you like to play a game of chess after lunch?"],
+        ["line", "There was a long line of people waiting outside the theater."],
+        ["end", "Please stay until the end of the concert for the finale."],
+        ["member", "She is an active member of the school debate team."],
+        ["law", "Wearing a helmet while riding a motorcycle is required by law."],
+        ["car", "We parked the car in the garage before the rain started."],
+        ["city", "Chicago is a vibrant city known for its architecture."],
+        ["community", "Volunteers planted fifty trees in the local community park."],
+        ["name", "Could you spell your last name for me, please?"],
+        ["president", "She was elected president of the student council."],
+        ["team", "Our robotics team worked hard to build the prototype."],
+        ["minute", "Wait just one minute—I need to grab my umbrella."],
+        ["idea", "Using color-coded flashcards is a brilliant idea!"],
+        ["kid", "When I was a kid, I loved building forts out of blankets."],
+        ["body", "Stretching after a workout helps your body recover faster."],
+        ["information", "You can find more information on the university website."],
+        ["back", "My back feels much better after doing some yoga stretches."],
+        ["parent", "Each parent received an invitation to the spring concert."],
+        ["face", "A huge smile spread across her face when she saw the gift."],
+        ["others", "Always treat others with kindness and respect."],
+        ["level", "After six months of practice, he reached an advanced level."],
+        ["office", "The principal's office is right next to the main lobby."],
+        ["door", "Please knock on the door before entering the room."],
+        ["health", "Eating fresh vegetables is essential for good health."],
+        ["person", "He is the most patient person I have ever met."],
+        ["art", "We visited the modern art museum during our field trip."],
+        ["war", "History books teach us the lessons of past wars."],
+        ["history", "I love learning about ancient history and archaeology."],
+        ["party", "We are throwing a surprise birthday party for Lucas."],
+        ["result", "Hard work and patience always bring a positive result."],
+        ["change", "Moving to a new city was a big change for our family."],
+        ["morning", "I like to review ten vocabulary words every morning."],
+        ["reason", "That is the main reason why I started learning English."],
+        ["research", "The scientist published new research on renewable energy."],
+        ["girl", "The girl in the front row asked a very insightful question."],
+        ["guy", "That friendly guy at the counter recommended the iced latte."],
+        ["moment", "Take a moment to breathe deeply before giving your speech."],
+        ["air", "Nothing feels better than breathing crisp mountain air."],
+        ["teacher", "Our English teacher makes every lesson fun and engaging."],
+        ["force", "Gravity is the force that keeps the planets in orbit."],
+        ["education", "A good education empowers students to achieve their dreams."]
+      ],
+      adverbsPrepositions: [
+        ["up", "Adverb / Preposition", "Look up at the sky—the sunset is gorgeous tonight!"],
+        ["so", "Adverb", "Thank you so much for helping me study for the test."],
+        ["out", "Adverb / Preposition", "Let us go out for dinner to celebrate your promotion."],
+        ["just", "Adverb", "I just finished reading the last page of the chapter."],
+        ["now", "Adverb", "We need to leave right now if we want to catch the train."],
+        ["how", "Adverb", "Do you know how to bake chocolate chip cookies?"],
+        ["then", "Adverb", "First we review the verbs, and then we practice sentences."],
+        ["more", "Adverb", "Could you speak a little more slowly, please?"],
+        ["also", "Adverb", "She speaks French, and she also understands Italian."],
+        ["here", "Adverb", "Please place your completed assignments right here."],
+        ["well", "Adverb", "He played the violin remarkably well at the recital."],
+        ["only", "Adverb", "It only took ten minutes to walk to the park."],
+        ["very", "Adverb", "This dictionary is very helpful for English learners."],
+        ["even", "Adverb", "She studied every day, even on rainy weekends."],
+        ["back", "Adverb", "I will be right back after I grab a glass of water."],
+        ["there", "Adverb", "We traveled to Seattle last summer and loved it there."],
+        ["down", "Adverb / Preposition", "Please sit down and take out your notebooks."],
+        ["still", "Adverb", "Are you still working on your science project?"],
+        ["in", "Preposition / Adverb", "The keys are in the small pocket of my backpack."],
+        ["as", "Adverb / Preposition", "He works as a tour guide during the summer months."],
+        ["to", "Preposition", "We walked to the beach to watch the sunrise."],
+        ["when", "Adverb", "Tell me when you are ready to begin the quiz."],
+        ["never", "Adverb", "I have never seen snow fall so heavily before."],
+        ["really", "Adverb", "I really appreciate your feedback on my essay."],
+        ["most", "Adverb", "Which topic did you find most interesting today?"],
+        ["on", "Preposition / Adverb", "The coffee mug is sitting on the kitchen table."],
+        ["why", "Adverb", "Do you know why the library closed early today?"],
+        ["about", "Preposition / Adverb", "We had a great conversation about our favorite books."],
+        ["over", "Preposition / Adverb", "A flock of birds flew right over our heads."],
+        ["again", "Adverb", "Could you play that audio clip one more time again?"],
+        ["where", "Adverb", "Where did you buy that awesome backpack?"],
+        ["right", "Adverb", "Turn right at the corner and you will see the bakery."],
+        ["off", "Adverb / Preposition", "Please turn off your phone before the movie begins."],
+        ["always", "Adverb", "She always brings a reusable water bottle to class."],
+        ["today", "Adverb", "We are learning twenty new English words today."],
+        ["all", "Adverb", "She was all alone in the library after nine o'clock."],
+        ["far", "Adverb", "How far is the museum from the train station?"],
+        ["long", "Adverb", "How long have you been studying American English?"],
+        ["away", "Adverb", "Put your phone away so you can focus on studying."],
+        ["yet", "Adverb", "Have you finished writing your book report yet?"],
+        ["often", "Adverb", "How often do you practice speaking with a partner?"],
+        ["ever", "Adverb", "Have you ever tried making homemade sushi?"],
+        ["however", "Adverb", "The hike was steep; however, the view made it worth it."],
+        ["almost", "Adverb", "We are almost done with the entire vocabulary list!"],
+        ["later", "Adverb", "I have a meeting now, so I will text you later."],
+        ["much", "Adverb", "I feel much better after getting a full night's sleep."],
+        ["once", "Adverb", "I have only visited Canada once, but I loved it."],
+        ["least", "Adverb", "Try to read in English for at least fifteen minutes daily."],
+        ["ago", "Adverb", "We moved into this apartment three years ago."],
+        ["together", "Adverb", "Studying together makes preparing for exams much easier."],
+        ["around", "Preposition / Adverb", "Let us walk around the lake before sunset."],
+        ["already", "Adverb", "She has already mastered half of the verbs on the list!"],
+        ["enough", "Adverb", "Is the room warm enough, or should I close the window?"],
+        ["both", "Adverb", "The class is both educational and genuinely fun."],
+        ["maybe", "Adverb", "Maybe we can go to the botanical garden this Sunday."],
+        ["actually", "Adverb", "I thought the exam would be hard, but it was actually fair."],
+        ["probably", "Adverb", "It will probably clear up by the afternoon."],
+        ["home", "Adverb", "Let us head home before the evening traffic gets heavy."],
+        ["of course", "Adverbial Phrase", "Of course you can borrow my notes from yesterday's lecture!"],
+        ["perhaps", "Adverb", "Perhaps we should review the irregular verbs one more time."],
+        ["little", "Adverb", "I was a little nervous before my speech, but it went great."],
+        ["else", "Adverb", "Is there anything else you need from the grocery store?"],
+        ["sometimes", "Adverb", "Sometimes I listen to English songs to learn new phrases."],
+        ["finally", "Adverb", "After weeks of practice, I finally nailed the pronunciation."],
+        ["less", "Adverb", "Try to worry less about mistakes and focus on communicating."],
+        ["better", "Adverb", "You will remember words better if you use them in sentences."],
+        ["early", "Adverb", "She arrived ten minutes early for her job interview."],
+        ["especially", "Adverb", "I love summer fruit, especially fresh peaches and berries."],
+        ["either", "Adverb", "I have not seen that movie yet, and my brother has not either."],
+        ["quite", "Adverb", "The documentary was quite inspiring from start to finish."],
+        ["simply", "Adverb", "Simply click a status button to track each word you learn."],
+        ["nearly", "Adverb", "It took nearly two hours to assemble the bookshelf."],
+        ["soon", "Adverb", "Spring will be here soon, and the flowers will bloom."],
+        ["certainly", "Adverb", "I will certainly let you know as soon as the results arrive."],
+        ["quickly", "Adverb", "She quickly jotted down the new idiom in her notebook."],
+        ["not", "Adverb", "Do not forget to save your essay before closing the app."],
+        ["recently", "Adverb", "Have you read any good articles recently?"],
+        ["before", "Preposition / Adverb", "Wash your hands thoroughly before eating dinner."],
+        ["usually", "Adverb", "I usually drink a cup of green tea in the morning."],
+        ["thus", "Adverb", "He practiced daily; thus, his fluency improved dramatically."],
+        ["exactly", "Adverb", "That is exactly the word I was trying to remember!"],
+        ["hard", "Adverb", "The team worked hard all season to reach the finals."],
+        ["particularly", "Adverb", "I am particularly interested in learning business vocabulary."],
+        ["pretty", "Adverb", "The math homework was pretty straightforward tonight."],
+        ["forward", "Adverb", "I am looking forward to our trip to the mountains."],
+        ["ok", "Adverb", "Everything turned out ok after we fixed the flat tire."],
+        ["clearly", "Adverb", "The teacher explained the grammar rule very clearly."],
+        ["indeed", "Adverb", "Learning four hundred core words is indeed a smart goal."],
+        ["rather", "Adverb", "It is rather chilly outside, so bring a sweater."],
+        ["that", "Adverb", "I did not realize the museum was that close to our hotel."],
+        ["tonight", "Adverb", "Are you going to watch the championship game tonight?"],
+        ["close", "Adverb / Preposition", "Our hotel is located very close to the central plaza."],
+        ["suddenly", "Adverb", "The lights suddenly went out during the thunderstorm."],
+        ["best", "Adverb", "I study best in a quiet room early in the morning."],
+        ["instead", "Adverb", "It was raining, so we watched a movie indoors instead."],
+        ["ahead", "Adverb", "Look straight ahead—you can see the ocean from here!"],
+        ["fast", "Adverb", "Time flies so fast when you are enjoying the lesson."],
+        ["alone", "Adverb", "She prefers to study alone before taking a big exam."],
+        ["eventually", "Adverb", "Keep practicing and you will eventually speak with ease."],
+        ["directly", "Adverb", "The shuttle bus goes directly from the airport to downtown."]
+      ]
+    };
+
+    // Category Metadata
+    const CATEGORIES = [
+      { id: 'verbs', label: 'Verbs', shortLabel: 'Verbs', color: 'indigo', subtitle: 'Present, -ing, Past, Past Participle' },
+      { id: 'adjectives', label: 'Adjectives', shortLabel: 'Adjectives', color: 'sky', subtitle: 'Descriptive Words' },
+      { id: 'nouns', label: 'Nouns', shortLabel: 'Nouns', color: 'violet', subtitle: 'People, Places & Things' },
+      { id: 'adverbsPrepositions', label: 'Adverbs & Prepositions', shortLabel: 'Adv. & Prep.', color: 'teal', subtitle: 'Modifiers & Connectors' },
+    ];
+
+    // Build normalized word list (400 items)
+    const ALL_WORDS = {};
+    CATEGORIES.forEach(cat => {
+      ALL_WORDS[cat.id] = RAW_DATA[cat.id].map((item, idx) => {
+        const rank = idx + 1;
+        const id = `${cat.id}_${rank}`;
+        if (cat.id === 'verbs') {
+          return {
+            id,
+            category: cat.id,
+            rank,
+            word: item[0],
+            presentParticiple: item[1],
+            past: item[2],
+            pastParticiple: item[3],
+            example: item[4],
+            isModal: item[5]
+          };
+        } else if (cat.id === 'adverbsPrepositions') {
+          return {
+            id,
+            category: cat.id,
+            rank,
+            word: item[0],
+            subtype: item[1],
+            example: item[2]
+          };
+        } else {
+          return {
+            id,
+            category: cat.id,
+            rank,
+            word: item[0],
+            example: item[1]
+          };
+        }
+      });
+    });
+
+    /**
+     * =========================================================================
+     * APPLICATION STATE & PERSISTENCE
+     * =========================================================================
+     */
+    const STORAGE_KEY = 'american_english_400_progress_v1';
+    const THEME_KEY = 'american_english_400_theme_v1';
+
+    let state = {
+      activeCategory: 'verbs',
+      searchQuery: '',
+      statusFilter: 'all', // all | know | think | learn | unmarked
+      mode: 'list', // list | flashcard
+      progress: {}, // { [wordId]: 'know' | 'think' | 'learn' }
+      fcIndex: 0,
+      fcList: []
+    };
+
+    // Safely load saved progress
+    function loadProgress() {
+      try {
+        const raw = localStorage.getItem(STORAGE_KEY);
+        if (raw) {
+          const parsed = JSON.parse(raw);
+          if (parsed && typeof parsed === 'object') {
+            state.progress = parsed;
+          }
+        }
+      } catch (err) {
+        console.warn('Could not load saved progress:', err);
+      }
+    }
+
+    // Safely save progress
+    function saveProgress() {
+      try {
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(state.progress));
+      } catch (err) {
+        console.warn('Could not save progress:', err);
+      }
+    }
+
+    // Initialize Dark/Light Theme
+    function initTheme() {
+      try {
+        const saved = localStorage.getItem(THEME_KEY);
+        if (saved === 'dark' || (!saved && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+          document.documentElement.classList.add('dark');
+        }
+      } catch (err) {
+        // Fallback to light mode
+      }
+    }
+
+    /**
+     * =========================================================================
+     * UTILITIES: SPEECH, HIGHLIGHTING, TOAST, MASTERY PERCENTAGE
+     * =========================================================================
+     */
+    function speakText(text) {
+      try {
+        if (!('speechSynthesis' in window)) {
+          showToast('Speech audio is not supported in this browser.');
+          return;
+        }
+        window.speechSynthesis.cancel();
+        const utterance = new SpeechSynthesisUtterance(text);
+        utterance.lang = 'en-US';
+        utterance.rate = 0.95;
+        window.speechSynthesis.speak(utterance);
+      } catch (err) {
+        showToast('Unable to play audio.');
+      }
+    }
+
+    let toastTimer = null;
+    function showToast(message) {
+      const toast = document.getElementById('toast');
+      const toastMsg = document.getElementById('toastMsg');
+      toastMsg.textContent = message;
+      toast.classList.remove('translate-y-20', 'opacity-0');
+      toast.classList.add('translate-y-0', 'opacity-100');
+      clearTimeout(toastTimer);
+      toastTimer = setTimeout(() => {
+        toast.classList.add('translate-y-20', 'opacity-0');
+        toast.classList.remove('translate-y-0', 'opacity-100');
+      }, 2200);
+    }
+
+    // Escape HTML to prevent injection
+    function escapeHtml(str) {
+      return String(str)
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;');
+    }
+
+    // Highlight target word (or verb forms) inside the example sentence
+    function highlightExample(item) {
+      const safeExample = escapeHtml(item.example);
+      const candidates = [item.word];
+      if (item.category === 'verbs') {
+        [item.presentParticiple, item.past, item.pastParticiple].forEach(form => {
+          if (form && !form.includes('—')) {
+            form.split('/').forEach(part => {
+              const clean = part.trim();
+              if (clean) candidates.push(clean);
+            });
+          }
+        });
+        // Also match simple -s/-es forms for verbs
+        candidates.push(item.word + 's', item.word + 'es');
+      } else if (item.category === 'nouns') {
+        candidates.push(item.word + 's', item.word + 'es');
+      }
+
+      // Sort longest first so multi-word phrases ("of course") match before shorter pieces
+      const unique = [...new Set(candidates)].sort((a, b) => b.length - a.length);
+      const escapedPatterns = unique.map(w => w.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'));
+      const regex = new RegExp(`\\b(${escapedPatterns.join('|')})\\b`, 'gi');
+
+      return safeExample.replace(regex, '<mark class="bg-indigo-100 dark:bg-indigo-900/70 text-indigo-900 dark:text-indigo-200 font-semibold px-1 rounded">$1</mark>');
+    }
+
+    // Per-word mastery progress info
+    function getMasteryMeta(status) {
+      if (status === 'know') {
+        return { pct: 100, label: '100% — Mastered', barClass: 'bg-emerald-500', textClass: 'text-emerald-600 dark:text-emerald-400' };
+      }
+      if (status === 'think') {
+        return { pct: 50, label: '50% — In Review', barClass: 'bg-amber-400', textClass: 'text-amber-600 dark:text-amber-400' };
+      }
+      if (status === 'learn') {
+        return { pct: 15, label: '15% — Learning', barClass: 'bg-rose-500', textClass: 'text-rose-600 dark:text-rose-400' };
+      }
+      return { pct: 0, label: '0% — Not Started', barClass: 'bg-slate-300 dark:bg-slate-700', textClass: 'text-slate-400 dark:text-slate-500' };
+    }
+
+    /**
+     * =========================================================================
+     * FILTERING & STATS COMPUTATION
+     * =========================================================================
+     */
+    function getFilteredWords() {
+      const list = ALL_WORDS[state.activeCategory];
+      const q = state.searchQuery.trim().toLowerCase();
+
+      return list.filter(item => {
+        const status = state.progress[item.id] || 'unmarked';
+        if (state.statusFilter !== 'all' && status !== state.statusFilter) {
+          return false;
+        }
+        if (!q) return true;
+
+        const haystack = [
+          item.word,
+          item.example,
+          item.presentParticiple || '',
+          item.past || '',
+          item.pastParticiple || '',
+          item.subtype || ''
+        ].join(' ').toLowerCase();
+
+        return haystack.includes(q);
+      });
+    }
+
+    function updateStatsUI() {
+      let totalKnow = 0, totalThink = 0, totalLearn = 0;
+      const totalWords = 400;
+
+      Object.values(state.progress).forEach(st => {
+        if (st === 'know') totalKnow++;
+        else if (st === 'think') totalThink++;
+        else if (st === 'learn') totalLearn++;
+      });
+
+      const pctKnow = Math.round((totalKnow / totalWords) * 100);
+      const pctThink = (totalThink / totalWords) * 100;
+      const pctLearn = (totalLearn / totalWords) * 100;
+
+      document.getElementById('globalLearnedText').textContent = `${totalKnow} / ${totalWords} (${pctKnow}%)`;
+      document.getElementById('statKnow').textContent = totalKnow;
+      document.getElementById('statThink').textContent = totalThink;
+      document.getElementById('statLearn').textContent = totalLearn;
+
+      document.getElementById('globalBarKnow').style.width = `${(totalKnow / totalWords) * 100}%`;
+      document.getElementById('globalBarThink').style.width = `${pctThink}%`;
+      document.getElementById('globalBarLearn').style.width = `${pctLearn}%`;
+
+      renderCategoryTabs();
+    }
+
+    /**
+     * =========================================================================
+     * RENDERERS: CATEGORY TABS, WORD CARDS, FLASHCARD VIEW
+     * =========================================================================
+     */
+    function renderCategoryTabs() {
+      const container = document.getElementById('categoryTabs');
+      container.innerHTML = CATEGORIES.map(cat => {
+        const words = ALL_WORDS[cat.id];
+        const learnedCount = words.filter(w => state.progress[w.id] === 'know').length;
+        const pct = Math.round((learnedCount / words.length) * 100);
+        const isActive = state.activeCategory === cat.id;
+
+        return `
+          <button
+            type="button"
+            onclick="selectCategory('${cat.id}')"
+            class="text-left p-3.5 sm:p-4 rounded-2xl border-2 transition-all duration-150 ${
+              isActive
+                ? 'bg-white dark:bg-slate-900 border-indigo-600 shadow-md shadow-indigo-500/10'
+                : 'bg-white/70 dark:bg-slate-900/60 border-slate-200 dark:border-slate-800 hover:border-slate-300 dark:hover:border-slate-700'
+            }"
+          >
+            <div class="flex items-center justify-between gap-2 mb-1">
+              <span class="font-bold text-sm sm:text-base ${isActive ? 'text-indigo-600 dark:text-indigo-400' : 'text-slate-800 dark:text-slate-200'} truncate">
+                ${cat.label}
+              </span>
+              <span class="text-xs font-bold px-2 py-0.5 rounded-full shrink-0 ${
+                learnedCount === 100
+                  ? 'bg-emerald-100 text-emerald-700 dark:bg-emerald-900/50 dark:text-emerald-300'
+                  : 'bg-slate-100 text-slate-600 dark:bg-slate-800 dark:text-slate-400'
+              }">
+                ${learnedCount}/100
+              </span>
+            </div>
+            <p class="text-[11px] text-slate-500 dark:text-slate-400 truncate mb-2.5">${cat.subtitle}</p>
+            <div class="w-full h-1.5 bg-slate-200 dark:bg-slate-800 rounded-full overflow-hidden">
+              <div class="h-full bg-emerald-500 rounded-full transition-all duration-500" style="width: ${pct}%"></div>
+            </div>
+          </button>
+        `;
+      }).join('');
+    }
+
+    function renderWordCard(item) {
+      const status = state.progress[item.id] || null;
+      const mastery = getMasteryMeta(status);
+
+      const borderAccent =
+        status === 'know' ? 'border-emerald-300 dark:border-emerald-800/80' :
+        status === 'think' ? 'border-amber-300 dark:border-amber-800/80' :
+        status === 'learn' ? 'border-rose-300 dark:border-rose-800/80' :
+        'border-slate-200 dark:border-slate-800';
+
+      // Verb conjugation grid (only for Verbs)
+      let extraContent = '';
+      if (item.category === 'verbs') {
+        extraContent = `
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 my-3">
+            <div class="p-2 rounded-xl bg-slate-50 dark:bg-slate-800/70 border border-slate-100 dark:border-slate-800">
+              <span class="block text-[10px] font-bold uppercase tracking-wider text-slate-400">Present</span>
+              <span class="text-xs sm:text-sm font-semibold text-slate-800 dark:text-slate-100">${escapeHtml(item.word)}</span>
+            </div>
+            <div class="p-2 rounded-xl bg-slate-50 dark:bg-slate-800/70 border border-slate-100 dark:border-slate-800">
+              <span class="block text-[10px] font-bold uppercase tracking-wider text-slate-400">Pres. Participle</span>
+              <span class="text-xs sm:text-sm font-semibold text-slate-800 dark:text-slate-100">${escapeHtml(item.presentParticiple)}</span>
+            </div>
+            <div class="p-2 rounded-xl bg-slate-50 dark:bg-slate-800/70 border border-slate-100 dark:border-slate-800">
+              <span class="block text-[10px] font-bold uppercase tracking-wider text-slate-400">Past</span>
+              <span class="text-xs sm:text-sm font-semibold text-slate-800 dark:text-slate-100">${escapeHtml(item.past)}</span>
+            </div>
+            <div class="p-2 rounded-xl bg-slate-50 dark:bg-slate-800/70 border border-slate-100 dark:border-slate-800">
+              <span class="block text-[10px] font-bold uppercase tracking-wider text-slate-400">Past Participle</span>
+              <span class="text-xs sm:text-sm font-semibold text-slate-800 dark:text-slate-100">${escapeHtml(item.pastParticiple)}</span>
+            </div>
+          </div>
+        `;
+      }
+
+      const badgeHtml =
+        item.category === 'verbs' && item.isModal
+          ? '<span class="text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-md bg-purple-100 text-purple-700 dark:bg-purple-900/40 dark:text-purple-300">Modal Verb</span>'
+          : item.subtype
+          ? `<span class="text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-md bg-teal-100 text-teal-700 dark:bg-teal-900/40 dark:text-teal-300">${escapeHtml(item.subtype)}</span>`
+          : '';
+
+      const safeWordJs = item.word.replace(/'/g, "\\'");
+      const safeExJs = item.example.replace(/'/g, "\\'");
+
+      return `
+        <article id="card-${item.id}" class="bg-white dark:bg-slate-900 rounded-2xl border ${borderAccent} p-4 sm:p-5 shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+          <div>
+            <!-- Card Header -->
+            <div class="flex items-start justify-between gap-2">
+              <div class="flex items-center flex-wrap gap-2">
+                <span class="text-xs font-bold text-slate-400 dark:text-slate-500">#${item.rank}</span>
+                <h2 class="text-xl font-extrabold text-slate-900 dark:text-white tracking-tight">${escapeHtml(item.word)}</h2>
+                ${badgeHtml}
+              </div>
+              <button
+                type="button"
+                onclick="speakText('${safeWordJs}')"
+                title="Listen to pronunciation"
+                aria-label="Pronounce ${escapeHtml(item.word)}"
+                class="p-2 rounded-xl bg-slate-100 hover:bg-indigo-100 text-slate-600 hover:text-indigo-600 dark:bg-slate-800 dark:hover:bg-indigo-900/60 dark:text-slate-300 dark:hover:text-indigo-300 transition shrink-0"
+              >
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z" />
+                </svg>
+              </button>
+            </div>
+
+            <!-- Verb Forms (if applicable) -->
+            ${extraContent}
+
+            <!-- Example Sentence -->
+            <div class="mt-2.5 p-3 rounded-xl bg-slate-50 dark:bg-slate-800/50 border border-slate-100 dark:border-slate-800 flex items-start justify-between gap-2">
+              <p class="text-sm text-slate-700 dark:text-slate-300 leading-relaxed">
+                ${highlightExample(item)}
+              </p>
+              <button
+                type="button"
+                onclick="speakText('${safeExJs}')"
+                title="Listen to example sentence"
+                class="text-slate-400 hover:text-indigo-600 dark:hover:text-indigo-400 p-1 shrink-0 transition"
+              >
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <!-- Footer: Per-Word Progress Bar & 3-Option Checklist -->
+          <div class="mt-4 pt-3 border-t border-slate-100 dark:border-slate-800">
+            <!-- Individual Word Progress Bar -->
+            <div class="flex items-center justify-between text-[11px] font-semibold mb-1.5">
+              <span class="text-slate-400 dark:text-slate-500">Word Progress</span>
+              <span class="${mastery.textClass}">${mastery.label}</span>
+            </div>
+            <div class="w-full h-1.5 bg-slate-200 dark:bg-slate-800 rounded-full overflow-hidden mb-3">
+              <div class="h-full ${mastery.barClass} rounded-full transition-all duration-300" style="width: ${mastery.pct}%"></div>
+            </div>
+
+            <!-- Checklist Buttons -->
+            <div class="grid grid-cols-3 gap-1.5" role="group" aria-label="Knowledge checklist for ${escapeHtml(item.word)}">
+              <button
+                type="button"
+                onclick="setWordStatus('${item.id}', 'know')"
+                class="py-2 px-2 rounded-xl text-[11px] sm:text-xs font-semibold border transition text-center leading-tight ${
+                  status === 'know'
+                    ? 'bg-emerald-600 text-white border-emerald-600 shadow-sm'
+                    : 'bg-white dark:bg-slate-900 text-slate-600 dark:text-slate-300 border-slate-200 dark:border-slate-700 hover:border-emerald-400 hover:text-emerald-700 dark:hover:text-emerald-400'
+                }"
+              >
+                I know this word
+              </button>
+              <button
+                type="button"
+                onclick="setWordStatus('${item.id}', 'think')"
+                class="py-2 px-2 rounded-xl text-[11px] sm:text-xs font-semibold border transition text-center leading-tight ${
+                  status === 'think'
+                    ? 'bg-amber-500 text-white border-amber-500 shadow-sm'
+                    : 'bg-white dark:bg-slate-900 text-slate-600 dark:text-slate-300 border-slate-200 dark:border-slate-700 hover:border-amber-400 hover:text-amber-700 dark:hover:text-amber-400'
+                }"
+              >
+                I think I know
+              </button>
+              <button
+                type="button"
+                onclick="setWordStatus('${item.id}', 'learn')"
+                class="py-2 px-2 rounded-xl text-[11px] sm:text-xs font-semibold border transition text-center leading-tight ${
+                  status === 'learn'
+                    ? 'bg-rose-600 text-white border-rose-600 shadow-sm'
+                    : 'bg-white dark:bg-slate-900 text-slate-600 dark:text-slate-300 border-slate-200 dark:border-slate-700 hover:border-rose-400 hover:text-rose-700 dark:hover:text-rose-400'
+                }"
+              >
+                Need to learn
+              </button>
+            </div>
+          </div>
+        </article>
+      `;
+    }
+
+    function renderMainView() {
+      const filtered = getFilteredWords();
+      const totalInCat = ALL_WORDS[state.activeCategory].length;
+
+      document.getElementById('resultsCount').textContent = `Showing ${filtered.length} of ${totalInCat} words`;
+
+      const listView = document.getElementById('listView');
+      const flashcardView = document.getElementById('flashcardView');
+      const emptyState = document.getElementById('emptyState');
+
+      if (filtered.length === 0) {
+        listView.classList.add('hidden');
+        flashcardView.classList.add('hidden');
+        emptyState.classList.remove('hidden');
+        return;
+      }
+
+      emptyState.classList.add('hidden');
+
+      if (state.mode === 'list') {
+        flashcardView.classList.add('hidden');
+        listView.classList.remove('hidden');
+        listView.innerHTML = filtered.map(renderWordCard).join('');
+      } else {
+        listView.classList.add('hidden');
+        flashcardView.classList.remove('hidden');
+        state.fcList = filtered;
+        if (state.fcIndex >= state.fcList.length) {
+          state.fcIndex = 0;
+        }
+        renderFlashcard();
+      }
+    }
+
+    function renderFlashcard() {
+      if (!state.fcList.length) return;
+      const item = state.fcList[state.fcIndex];
+      const catMeta = CATEGORIES.find(c => c.id === item.category);
+      const status = state.progress[item.id] || null;
+      const mastery = getMasteryMeta(status);
+
+      document.getElementById('fcCategoryBadge').textContent = catMeta.label;
+      document.getElementById('fcCounter').textContent = `Card ${state.fcIndex + 1} of ${state.fcList.length}`;
+      document.getElementById('fcRank').textContent = `#${item.rank}`;
+      document.getElementById('fcWord').textContent = item.word;
+
+      // Per-word Mastery Bar
+      document.getElementById('fcMasteryLabel').textContent = mastery.label;
+      const bar = document.getElementById('fcMasteryBar');
+      bar.className = `h-full rounded-full transition-all duration-300 ${mastery.barClass}`;
+      bar.style.width = `${mastery.pct}%`;
+
+      // Hide details initially on new card
+      const details = document.getElementById('fcDetails');
+      const revealBtn = document.getElementById('fcRevealBtn');
+      details.classList.add('hidden');
+      revealBtn.textContent = 'Show Forms & Example';
+
+      // Verb forms
+      const verbFormsEl = document.getElementById('fcVerbForms');
+      if (item.category === 'verbs') {
+        verbFormsEl.classList.remove('hidden');
+        verbFormsEl.innerHTML = `
+          <div class="p-2.5 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700">
+            <span class="block text-[10px] font-bold uppercase text-slate-400">Present</span>
+            <span class="text-sm font-bold">${escapeHtml(item.word)}</span>
+          </div>
+          <div class="p-2.5 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700">
+            <span class="block text-[10px] font-bold uppercase text-slate-400">Pres. Participle</span>
+            <span class="text-sm font-bold">${escapeHtml(item.presentParticiple)}</span>
+          </div>
+          <div class="p-2.5 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700">
+            <span class="block text-[10px] font-bold uppercase text-slate-400">Past</span>
+            <span class="text-sm font-bold">${escapeHtml(item.past)}</span>
+          </div>
+          <div class="p-2.5 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700">
+            <span class="block text-[10px] font-bold uppercase text-slate-400">Past Participle</span>
+            <span class="text-sm font-bold">${escapeHtml(item.pastParticiple)}</span>
+          </div>
+        `;
+      } else {
+        verbFormsEl.classList.add('hidden');
+      }
+
+      // Subtype badge
+      const subtypeEl = document.getElementById('fcSubtype');
+      if (item.subtype) {
+        subtypeEl.classList.remove('hidden');
+        subtypeEl.innerHTML = `<span class="inline-block text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full bg-teal-100 text-teal-800 dark:bg-teal-900/50 dark:text-teal-300">${escapeHtml(item.subtype)}</span>`;
+      } else {
+        subtypeEl.classList.add('hidden');
+      }
+
+      // Example
+      document.getElementById('fcExample').innerHTML = highlightExample(item);
+
+      // Update checklist button styles
+      document.querySelectorAll('.fc-status-btn').forEach(btn => {
+        const s = btn.dataset.status;
+        const active = status === s;
+        btn.className = 'fc-status-btn py-3 px-3 rounded-xl text-xs font-bold border-2 transition flex items-center justify-center gap-1.5 ';
+        if (s === 'know') {
+          btn.className += active
+            ? 'bg-emerald-600 text-white border-emerald-600'
+            : 'bg-white dark:bg-slate-900 text-emerald-700 dark:text-emerald-400 border-emerald-200 dark:border-emerald-900 hover:bg-emerald-50 dark:hover:bg-emerald-950/40';
+        } else if (s === 'think') {
+          btn.className += active
+            ? 'bg-amber-500 text-white border-amber-500'
+            : 'bg-white dark:bg-slate-900 text-amber-700 dark:text-amber-400 border-amber-200 dark:border-amber-900 hover:bg-amber-50 dark:hover:bg-amber-950/40';
+        } else {
+          btn.className += active
+            ? 'bg-rose-600 text-white border-rose-600'
+            : 'bg-white dark:bg-slate-900 text-rose-700 dark:text-rose-400 border-rose-200 dark:border-rose-900 hover:bg-rose-50 dark:hover:bg-rose-950/40';
+        }
+      });
+    }
+
+    /**
+     * =========================================================================
+     * USER ACTIONS
+     * =========================================================================
+     */
+    window.selectCategory = function (catId) {
+      state.activeCategory = catId;
+      state.fcIndex = 0;
+      renderCategoryTabs();
+      renderMainView();
+    };
+
+    window.setWordStatus = function (wordId, newStatus) {
+      // Toggle off if clicking the already-selected status
+      if (state.progress[wordId] === newStatus) {
+        delete state.progress[wordId];
+      } else {
+        state.progress[wordId] = newStatus;
+      }
+      saveProgress();
+      updateStatsUI();
+
+      if (state.mode === 'list') {
+        // Re-render list if filtering by status, or just update the single card for snappy UX
+        if (state.statusFilter !== 'all') {
+          renderMainView();
+        } else {
+          const item = ALL_WORDS[state.activeCategory].find(w => w.id === wordId);
+          const cardEl = document.getElementById(`card-${wordId}`);
+          if (item && cardEl) {
+            cardEl.outerHTML = renderWordCard(item);
+          }
+        }
+      } else {
+        renderFlashcard();
+      }
+    };
+
+    /**
+     * =========================================================================
+     * EVENT LISTENERS & INITIALIZATION
+     * =========================================================================
+     */
+    document.addEventListener('DOMContentLoaded', () => {
+      initTheme();
+      loadProgress();
+      updateStatsUI();
+      renderMainView();
+
+      // Search Input
+      const searchInput = document.getElementById('searchInput');
+      const clearSearchBtn = document.getElementById('clearSearchBtn');
+      searchInput.addEventListener('input', (e) => {
+        state.searchQuery = e.target.value;
+        state.fcIndex = 0;
+        clearSearchBtn.classList.toggle('hidden', !state.searchQuery);
+        renderMainView();
+      });
+
+      clearSearchBtn.addEventListener('click', () => {
+        state.searchQuery = '';
+        searchInput.value = '';
+        clearSearchBtn.classList.add('hidden');
+        renderMainView();
+      });
+
+      // Status Filter Buttons
+      document.querySelectorAll('.filter-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          state.statusFilter = btn.dataset.filter;
+          state.fcIndex = 0;
+          document.querySelectorAll('.filter-btn').forEach(b => {
+            const active = b.dataset.filter === state.statusFilter;
+            b.className = `filter-btn px-3 py-2 rounded-xl text-xs font-semibold transition ${
+              active
+                ? 'bg-indigo-600 text-white'
+                : 'bg-slate-100 text-slate-700 hover:bg-slate-200 dark:bg-slate-800 dark:text-slate-300'
+            }`;
+          });
+          renderMainView();
+        });
+      });
+
+      // Reset Filters Button (in Empty State)
+      document.getElementById('resetFiltersBtn').addEventListener('click', () => {
+        state.searchQuery = '';
+        state.statusFilter = 'all';
+        searchInput.value = '';
+        clearSearchBtn.classList.add('hidden');
+        document.querySelector('.filter-btn[data-filter="all"]').click();
+      });
+
+      // Mode Toggle (List <-> Flashcards)
+      document.getElementById('modeToggleBtn').addEventListener('click', () => {
+        state.mode = state.mode === 'list' ? 'flashcard' : 'list';
+        document.getElementById('modeToggleText').textContent = state.mode === 'list' ? 'Flashcards' : 'List View';
+        renderMainView();
+      });
+
+      // Theme Toggle
+      document.getElementById('themeToggleBtn').addEventListener('click', () => {
+        const isDark = document.documentElement.classList.toggle('dark');
+        try {
+          localStorage.setItem(THEME_KEY, isDark ? 'dark' : 'light');
+        } catch (err) {}
+      });
+
+      // Reset Modal Controls
+      const resetModal = document.getElementById('resetModal');
+      document.getElementById('resetBtn').addEventListener('click', () => {
+        resetModal.classList.remove('hidden');
+      });
+      document.getElementById('cancelResetBtn').addEventListener('click', () => {
+        resetModal.classList.add('hidden');
+      });
+      document.getElementById('confirmResetBtn').addEventListener('click', () => {
+        state.progress = {};
+        saveProgress();
+        updateStatsUI();
+        renderMainView();
+        resetModal.classList.add('hidden');
+        showToast('All progress has been reset.');
+      });
+
+      // Flashcard Controls
+      document.getElementById('fcRevealBtn').addEventListener('click', () => {
+        const details = document.getElementById('fcDetails');
+        const btn = document.getElementById('fcRevealBtn');
+        const isHidden = details.classList.toggle('hidden');
+        btn.textContent = isHidden ? 'Show Forms & Example' : 'Hide Forms & Example';
+      });
+
+      document.getElementById('fcSpeakBtn').addEventListener('click', () => {
+        if (state.fcList[state.fcIndex]) {
+          speakText(state.fcList[state.fcIndex].word);
+        }
+      });
+
+      document.getElementById('fcSpeakExBtn').addEventListener('click', () => {
+        if (state.fcList[state.fcIndex]) {
+          speakText(state.fcList[state.fcIndex].example);
+        }
+      });
+
+      document.querySelectorAll('.fc-status-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const item = state.fcList[state.fcIndex];
+          if (item) {
+            setWordStatus(item.id, btn.dataset.status);
+          }
+        });
+      });
+
+      document.getElementById('fcPrevBtn').addEventListener('click', () => {
+        if (!state.fcList.length) return;
+        state.fcIndex = (state.fcIndex - 1 + state.fcList.length) % state.fcList.length;
+        renderFlashcard();
+      });
+
+      document.getElementById('fcNextBtn').addEventListener('click', () => {
+        if (!state.fcList.length) return;
+        state.fcIndex = (state.fcIndex + 1) % state.fcList.length;
+        renderFlashcard();
+      });
+
+      document.getElementById('fcShuffleBtn').addEventListener('click', () => {
+        for (let i = state.fcList.length - 1; i > 0; i--) {
+          const j = Math.floor(Math.random() * (i + 1));
+          [state.fcList[i], state.fcList[j]] = [state.fcList[j], state.fcList[i]];
+        }
+        state.fcIndex = 0;
+        renderFlashcard();
+        showToast('Flashcards shuffled!');
+      });
+    });
+  </script>
+</body>
+</html>
